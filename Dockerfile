@@ -14,6 +14,8 @@ RUN dotnet restore tests/tests.csproj
 COPY . .
 
 #test
+# Set the flag to tell TeamCity that these are unit tests:
+ENV TEAMCITY_PROJECT_NAME=fake
 RUN dotnet test tests/tests.csproj
 
 #publish
