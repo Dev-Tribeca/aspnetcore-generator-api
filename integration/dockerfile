@@ -5,4 +5,6 @@ COPY integration.csproj .
 RUN dotnet restore
 
 COPY . .
+# env setup
+ENV TEAMCITY_PROJECT_NAME=Aspnetcore_Generator_Api
 ENTRYPOINT ["dotnet", "test"]
