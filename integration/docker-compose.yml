@@ -12,3 +12,5 @@ services:
   integration:
     image: my-registry:5500/aspnetcore-gen:integration-${BUILD_NUMBER-17}
     build: .
+    environment:
+      - TEAMCITY_PROJECT_NAME
