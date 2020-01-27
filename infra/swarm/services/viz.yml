@@ -2,11 +2,11 @@ version: "3.1"
 
 services:
   viz:
-    image: manomarks/visualizer
+    image: henaras/visualizer
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     ports:
-      - "8090:8080"
+      - "8095:8080"
     deploy:
       placement:
         constraints:
