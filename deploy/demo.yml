@@ -4,11 +4,11 @@ services:
   generator:
     image: my-registry:5500/aspnetcore-gen:ci-${GENERATOR_BUILD_NUMBER-30}
     ports:
-      - "8080:80"
+      - "${PORT_GENERATOR-8081}:80"
   mail:
     image: mailhog/mailhog
     ports:
-      - "8081:8025"
+      - "${PORT_MAILHOG-8082}:8025"
   integration:
     image: my-registry:5500/aspnetcore-gen:integration-${BUILD_NUMBER-14}
     build: .
